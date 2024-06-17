@@ -1,8 +1,8 @@
-public class Bebida extends Produto {
+public class Bebida extends ProdutoNaoPerecivel {
     private boolean alcoolica;
 
-    public Bebida(int id, String nome, double preco, boolean alcoolica) {
-        super(id, nome, preco);
+    public Bebida(int id, String nome, double preco, String marca, boolean alcoolica) {
+        super(id, nome, preco, marca);
         this.alcoolica = alcoolica;
     }
 
@@ -19,6 +19,6 @@ public class Bebida extends Produto {
     @Override
     public void exibirDetalhes() {
         String tipo = alcoolica ? "Alcoólica" : "Não Alcoólica";
-        System.out.println("Bebida [ID: " + getId() + ", Nome: " + getNome() + ", Preço: " + getPreco() + ", Tipo: " + tipo + "]");
+        System.out.println("Bebida [ID: " + getId() + ", Nome: " + getNome() + ", Preço: " + getPreco() + ", Marca: " + getMarca() + ", Tipo: " + tipo + "]");
     }
 }
