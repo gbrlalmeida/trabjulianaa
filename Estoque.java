@@ -49,7 +49,7 @@ public class Estoque {
                 produto.setNome(sc.nextLine());
                 System.out.print("Novo Preço: ");
                 produto.setPreco(sc.nextDouble());
-                sc.nextLine(); // Consome o \n
+                sc.nextLine(); 
                 if (produto instanceof ProdutoPerecivel) {
                     System.out.print("Nova Data de Validade: ");
                     ((ProdutoPerecivel) produto).setDataValidade(sc.nextLine());
@@ -84,7 +84,7 @@ public class Estoque {
             System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
-            sc.nextLine(); // Consome o \n
+            sc.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -94,16 +94,16 @@ public class Estoque {
                     System.out.println("4. Produto Não Perecível");
                     System.out.print("Escolha o tipo de produto: ");
                     int tipo = sc.nextInt();
-                    sc.nextLine(); // Consome o \n
+                    sc.nextLine(); 
 
                     System.out.print("ID: ");
                     int id = sc.nextInt();
-                    sc.nextLine(); // Consome o \n
+                    sc.nextLine();
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
                     System.out.print("Preço: ");
                     double preco = sc.nextDouble();
-                    sc.nextLine(); // Consome o \n
+                    sc.nextLine(); 
 
                     switch (tipo) {
                         case 1:
@@ -117,7 +117,7 @@ public class Estoque {
                             String marca = sc.nextLine();
                             System.out.print("É Alcoólica? (true/false): ");
                             boolean alcoolica = sc.nextBoolean();
-                            sc.nextLine(); // Consome o \n
+                            sc.nextLine(); 
                             Bebida bebida = new Bebida(id, nome, preco, marca, alcoolica);
                             estoque.cadastrarProduto(bebida);
                             break;
